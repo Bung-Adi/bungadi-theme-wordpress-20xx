@@ -1,0 +1,88 @@
+.hero{
+    position: relative;
+    background-image: url('/gambar/bg-heromobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    // min-height: 85vh;
+    padding: 15px 15px;
+    @include breakpoint-up(medium){
+        padding: 15px 40px;
+    }
+    @include breakpoint-up(large){
+        padding: 15px 80px;
+        min-height: auto;
+    }
+    @include breakpoint-up(xlarge){
+        padding: 15px 140px;
+    }
+
+    &__content{
+        max-width: 500px;
+        height: 100%;
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include breakpoint-up(medium){
+            max-width: 720px;
+        }
+        @include breakpoint-up(large){
+            padding-top: 80px;
+        }
+        @include breakpoint-up(xlarge){
+            max-width: 70vw;
+            min-height: 580px;
+        }
+        .headline{
+            color: $color-white;
+            h1{
+                // margin: 16px auto;
+                display: inline;
+            }
+            .hilight{
+                display: inline-block;
+                position: relative;
+                overflow-x: hidden;
+                h1{
+                    display: inline;
+                    position: relative;
+                }
+                .marker{
+                    content: "";
+                    height: 80%;
+                    width: 100%;
+                    position: absolute;
+                    top: 20%;
+                    left: 0%;
+                    right: 0%;
+                    bottom: 0%;
+                    background-color: $color-black;
+                    animation: 1.5s ease-out 0s 1 slideInLeft;
+                }
+            }
+        }
+        p{
+            margin-top: 16px;
+            margin-bottom: 24px;
+            color: $color-white;
+        }
+    }
+
+    &__sc{
+        position: absolute;
+        height: 105px;
+        width: 38px;
+        right: 1px;
+        bottom: 1px;
+        display: none;
+        border-left: 3px solid $color-black;
+        h4{
+            color: $color-black;
+            transform: rotate(90deg);
+        }
+        @include breakpoint-up(medium){
+            display: block;
+        }
+    }
+}

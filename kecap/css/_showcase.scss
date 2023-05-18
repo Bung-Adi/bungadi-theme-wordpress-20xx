@@ -1,0 +1,56 @@
+.showcase{
+    position: relative;
+    padding: 64px 15px 300px 15px;
+    background-image: $color-gradien;
+    @include breakpoint-up(medium){
+        padding: 80px 40px 300px 40px;
+    }
+    @include breakpoint-up(large){
+        padding: 112px 80px 300px 80px;
+        min-height: auto;
+    }
+    @include breakpoint-up(xlarge){
+        padding: 128px 140px 300px 140px;
+    }
+
+    &__content{
+        color: $color-white;
+        h4{
+            margin: 0 0 8px 0;
+        }
+        h2{
+            margin: 0 0 16px 0;
+        }
+        p{
+            margin: 32px auto 8px auto;
+        }
+    }
+}
+
+.screenshoot{
+    padding: 30px 15px;
+    @include breakpoint-up(medium){
+        padding: 40px 40px;
+    }
+    @include breakpoint-up(large){
+        padding: 60px 80px;
+        min-height: auto;
+    }
+    @include breakpoint-up(xlarge){
+        padding: 60px 140px;
+    }
+    .img-wraper{
+        width: 100%;
+        height: auto;
+        margin-bottom: -300px;
+        position: relative;
+        top: -300px;
+        box-shadow: $dropshadow;
+        border-radius: 1%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+}

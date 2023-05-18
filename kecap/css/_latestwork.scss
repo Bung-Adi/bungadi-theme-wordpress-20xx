@@ -1,0 +1,179 @@
+.latestwork{
+    padding: 15px 15px;
+    overflow: hidden;
+    @include breakpoint-up(medium){
+        padding: 20px 40px;
+    }
+    @include breakpoint-up(large){
+        padding: 30px 80px 0px 80px;
+
+    }
+    @include breakpoint-up(xlarge){
+        padding: 30px 140px 0px 140px;
+    }
+
+    .project{
+        padding: 48px 0;
+        display: grid;
+        align-items: center;
+        justify-items: stretch;
+        align-content: stretch;
+        justify-content: space-between;
+        grid-template-columns: 1fr ;
+        grid-template-rows: auto auto auto;
+        @include breakpoint-up(medium){
+            padding: 40px 0;
+        }
+        @include breakpoint-up(large){
+            padding: 32px 0;
+            column-gap: 60px;
+            row-gap: 14px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas: 'a b' 'c b';
+        }
+
+        .left-part{
+            grid-column : span 1;
+            grid-row: span 1;
+            width: 100%;
+            min-width: auto;
+            max-width: none;
+            @include breakpoint-up(large){
+                width: auto;
+                min-width: 30%;
+                grid-area: a;
+            }
+            h4{
+                background: $color-gradien;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+            h2{
+                margin-top: 0;
+                margin-bottom: 16px;
+            }
+            .tagwraper{
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                justify-content: start;
+                flex-wrap: wrap;
+                margin-top: 0;
+                @include breakpoint-up(large){
+                    margin-bottom: 16px;
+                }
+                p{
+                    padding: 8px 10px;
+                    margin-right: 8px;
+                    margin-bottom: 8px;
+                    border-radius: 8px;
+                    background-color: $color-acent;
+                    a{
+                        font-size: 18px;
+                        font-weight: 400;
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+
+        .thumbnail{
+            grid-column-start : 1;
+            grid-column-end : 1;
+            grid-row-start: 2;
+            grid-row-end: 2;
+            align-self: center;
+            justify-self: end;
+            min-width: 50%;
+            position: relative;
+            margin-top: 32px;
+            margin-bottom: 32px;
+            padding: 0 8px;
+            @include breakpoint-up(large){
+                min-width: 70%;
+                grid-column-start : 2;
+                grid-column-end : 2;
+                grid-row-start: 1;
+                grid-row-end: 2;
+                width: auto;
+                grid-area: b;
+            }
+            &-wraper{
+                width: 100%;
+                .thumb{
+                    display: inline-block;
+                    position: relative;
+                    width: 80%;
+                    left: 20%;
+                    border-radius: 4%;
+                    overflow: hidden;
+                    box-shadow: $dropshadow;
+                    @include breakpoint-up(large){
+                        width: 100%;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .overlay-hover-img{
+                        transition: visible ease-in-out 300ms;
+                    }
+                    &:hover{
+                        .overlay-hover-img{
+                            visibility: visible;
+                        }
+                    }
+                }
+                .blob{
+                    display: inline-block;
+                    width: 70%;
+                    position: absolute;
+                    top: auto;
+                    right: auto;
+                    left: 0px;
+                    bottom: -20px;
+                    z-index: -1;
+                    @include breakpoint-up(large){
+                        width: 100%;
+                        bottom: -60px;
+                    }
+                }
+            }
+        }
+
+        .description{
+            grid-column-start : 1;
+            grid-column-end : 1;
+            grid-row-start: 3;
+            grid-row-end: 3;
+            align-self: start;
+            justify-self: auto;
+            @include breakpoint-up(large){
+                grid-column-start : 1;
+                grid-column-end : 1;
+                grid-row-start: 2;
+                grid-row-end: 2;
+                grid-area: c;
+            }
+            p{
+                margin-top: 0;
+                margin-bottom: 8px;
+                @include breakpoint-up(large){
+                    max-width: 480px;
+                }
+            }
+            .button{
+                margin-top: 16px;
+                float: right;
+                @include breakpoint-up(large){
+                    float: none;
+                }
+            }
+        }
+    }
+
+}

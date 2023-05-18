@@ -1,0 +1,63 @@
+.footer{
+    padding: 30px 15px;
+    background-image: url('/gambar/footer-bg-m.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    color: $color-white;
+    @include breakpoint-up(medium){
+        padding: 40px 40px;
+    }
+    @include breakpoint-up(large){
+        padding: 60px 80px;
+    }
+    @include breakpoint-up(xlarge){
+        padding: 60px 140px;
+        background-position: center -1%;
+    }
+
+    .wtw{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: space-between;
+        margin-top: 60px;
+        margin-bottom: 40px;
+        @include breakpoint-up(medium){
+            flex-direction: row;
+            margin-bottom: 60px;
+        }
+        @include breakpoint-up(large){
+            margin-top: 120px;
+        }
+
+        .sideone{
+            width: 100%;
+            @include breakpoint-up(large){
+                width: auto;
+                min-width: 410px;
+                max-width: 50%;
+            }
+        }
+
+        .sidetwo{
+            padding-top: 32px;
+            margin-bottom: 20px;
+            max-width: 544px;
+            @include breakpoint-up(medium){
+                padding-top: 0px;
+            }
+            p{
+                margin-top: 0;
+                margin-bottom: 8px;
+            }
+        }
+
+    }
+
+    .copyright{
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+}

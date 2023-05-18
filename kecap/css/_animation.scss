@@ -1,0 +1,58 @@
+.has-fade{
+    visibility: hidden;
+    @include breakpoint-up(medium){
+        visibility: visible;
+    }
+}
+@keyframes fade-in {
+    from {
+      visibility: hidden;
+      opacity: 0;
+    }
+    1% {
+      visibility: visible;
+      opacity: 0;
+    }
+    to {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+.fade-in{
+    animation: fade-in 300ms ease-in-out forwards;
+}
+@keyframes fade-out {
+    from {
+      visibility: visible;
+      opacity: 1;
+    } 
+    99% {
+        visibility: visible;
+        opacity: 0;
+    }
+    to {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+.fade-out{
+    animation: fade-out 300ms ease-in-out forwards;
+}
+
+@keyframes scrollIndicatorAnimate {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,54 @@
+.topbg{
+    padding: 15px 15px;
+    background-image: $color-gradien;
+    margin-bottom: 16px;
+    @include breakpoint-up(medium){
+        padding: 15px 40px;
+    }
+    @include breakpoint-up(large){
+        padding: 15px 80px;
+        min-height: auto;
+    }
+    @include breakpoint-up(xlarge){
+        padding: 15px 140px;
+    }
+
+    &__title{
+        color: $color-white;
+        margin-top: 16px;
+        @include breakpoint-up(medium){
+            margin-top: 64px;
+        }
+    }
+}
+
+.contentarea{
+    min-height: 75vh;
+    padding: 15px 15px;
+    margin-bottom: 16px;
+    @include breakpoint-up(medium){
+        padding: 15px 40px;
+    }
+    @include breakpoint-up(large){
+        padding: 15px 80px;
+        min-height: auto;
+    }
+    @include breakpoint-up(xlarge){
+        padding: 15px 140px;
+    }
+
+    &__content{
+        .yourcontent{
+            align-items: stretch;
+            justify-content: center;
+            margin: 8px;
+            width: auto;
+            @include breakpoint-up(medium){
+                justify-content: start;
+            }
+            @include breakpoint-up(large){
+                margin-top: 0;
+            }
+        }
+    }
+}

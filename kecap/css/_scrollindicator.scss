@@ -1,0 +1,59 @@
+.scroll-indicator{
+    display: none;
+    padding: 0 84px;
+    height: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0px;
+    @include breakpoint-up(medium){
+        display: block;
+    }
+    @include breakpoint-up(large){
+        padding: 0 124px;
+    }
+    @include breakpoint-up(xlarge){
+        padding: 0 228px;
+    }
+
+    .container{
+        position: relative;
+        .scrolblock{
+            width: 48px;
+            height: 120px;
+            overflow: hidden;
+            position: absolute;
+            top: auto;
+            left: auto;
+            right: 0%;
+            bottom: 0%;
+            .arrow{
+                display: inline-block;
+                width: 2px;
+                height: 100%;
+                position: absolute;
+                top: 0%;
+                left: 0%;
+                right: auto;
+                bottom: auto;
+                animation: scrollIndicatorAnimate 1s ease-out 1s infinite alternate;
+                // animation: name duration timing-function delay iteration-count direction fill-mode;
+                background-color: $color-black;
+            }
+            h4{
+                display: inline-block;
+                width: 180%;
+                color: $color-black;
+                text-align: left;
+                transform: rotate(90deg);
+                position: absolute;
+                top: 8%;
+                left: -40%;
+                right: auto;
+                bottom: auto;
+            }
+        }
+    }
+
+}
